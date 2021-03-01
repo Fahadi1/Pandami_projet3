@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
+	"http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+  <display-name>PandamiEAR</display-name>
+  <module>
+    <web>
+      <web-uri>PandamiWeb-1.0.war</web-uri>
+      <context-root>/PandamiWeb</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>PandamiBusiness-1.0.jar</ejb>
+  </module>
+  <module>
+    <ejb>PandamiDao-1.0.jar</ejb>
+  </module>
+</application>
