@@ -5,7 +5,7 @@ import javax.persistence.PersistenceContext;
 
 import fr.eql.ai108.pandami.idao.GenericIDao;
 
-public class GenericDao<T> implements GenericIDao<T> {
+public abstract class GenericDao<T> implements GenericIDao<T> {
 
 	@PersistenceContext (unitName = "PandamiPU")
 	private EntityManager em;
@@ -15,6 +15,7 @@ public class GenericDao<T> implements GenericIDao<T> {
 		try {
 			em.persist(t);
 		} catch (Exception e) {
+			t = null;
 			e.printStackTrace();
 		}
 		return t;
